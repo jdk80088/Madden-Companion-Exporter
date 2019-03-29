@@ -1,6 +1,9 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var admin = require("firebase-admin");
+
+const app = express();
+
 var serviceAccount = require('/Users/jeremykane/madden firebase/madden-lod-firebase-adminsdk-fu9ar-3d802fe3c6.json');
 
 admin.initializeApp({
@@ -8,7 +11,7 @@ admin.initializeApp({
   databaseURL: "https://madden-lod.firebaseio.com"
 });
 
-const app = express();
+
 
 app.set('port', (process.env.PORT || 3001));
 
